@@ -1,0 +1,442 @@
+/* Estilos generales */
+:root {
+  /* Variables CSS para colores */
+  --color-primary: #3498db; /* Color primario */
+  --color-secondary: #2ecc71; /* Color secundario */
+  --color-accent: #e74c3c; /* Color de acento */
+  --color-text: #34495e; /* Color del texto */
+  --color-bg: #ecf0f1; /* Color de fondo */
+}
+
+* {
+  margin: 0; /* Elimina el margen por defecto de todos los elementos */
+  padding: 0; /* Elimina el padding por defecto de todos los elementos */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho y alto total del elemento */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la fuente del cuerpo */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: var(--color-text); /* Color del texto usando variable */
+  background-color: var(--color-bg); /* Color de fondo usando variable */
+}
+
+.body-container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 20px; /* Espaciado interno a los lados */
+  width: 100%; /* Ancho completo del contenedor */
+}
+
+/* Header y navegación */
+.header {
+  background-color: var(--color-primary); /* Color de fondo del header */
+  padding: 1rem 0; /* Espaciado interno vertical */
+  position: sticky; /* Mantiene el header en la parte superior al hacer scroll */
+  top: 0; /* Posición en la parte superior */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del header */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.main-nav {
+  display: flex; /* Usa flexbox para la disposición */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Alinea elementos verticalmente al centro */
+}
+
+.logo-img {
+  max-width: 90px; /* Ancho máximo de la imagen del logo */
+  margin-left: 30px; /* Margen a la izquierda */
+}
+
+.nav-list {
+  display: flex; /* Usa flexbox para la lista de navegación */
+  list-style: none; /* Elimina los puntos de la lista */
+}
+
+.nav-link {
+  color: white; /* Color del texto del enlace */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  padding: 0.5rem 1rem; /* Espaciado interno del enlace */
+  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
+  font-size: 20px; /* Tamaño de fuente del enlace */
+  margin-right: 10px; /* Margen a la derecha */
+}
+
+.nav-link:hover {
+  background-color: var(--color-secondary); /* Color de fondo al pasar el mouse */
+  border-radius: 5px; /* Bordes redondeados al pasar el mouse */
+}
+
+/* Sección Hero */
+.section-hero {
+  position: relative; /* Posición relativa para elementos hijos */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("https://static4.depositphotos.com/1008939/385/i/450/depositphotos_3857392-stock-photo-future.jpg"); /* Imagen de fondo con degradado */
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* No repite la imagen de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  padding: 150px 0; /* Espaciado interno vertical */
+  border-radius: 0px 0px 5px 5px; /* Bordes redondeados en la parte inferior */
+  min-height: 100vh; /* Altura mínima de la sección */
+  display: flex; /* Usa flexbox para la disposición */
+  flex-direction: column; /* Disposición en columna */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+}
+  
+  .main-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-3px);
+  }
+  
+  /* Secciones generales */
+  .section {
+    padding: 6rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-primary);
+  }
+  
+  /* Sección Acerca de */
+  .acerca-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .section-text {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .acerca-list {
+    flex: 1;
+    list-style: none;
+  }
+  
+  .acerca-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .acerca-list i {
+    color: var(--color-secondary);
+    margin-right: 0.5rem;
+  }
+  
+  /* Sección Líderes */
+  .lideres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .lider-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .lider-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .lider-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .lider-nombre, .lider-cargo, .lider-descripcion {
+    padding: 0.5rem 1rem;
+  }
+  
+  .lider-nombre {
+    color: var(--color-primary);
+  }
+  
+  /* Sección Testimonios */
+  .testimonios-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  .lider-card, .testimonio-card, .noticia-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .testimonio-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonio-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  /* Sección Noticias */
+  .noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .noticia-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .noticia-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .noticia-titulo, .noticia-resumen {
+    padding: 1rem;
+  }
+  
+  /* Sección Contacto */
+  .contacto-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .contacto-form, .contacto-info {
+    flex: 1;
+  }
+  
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-submit {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .form-submit:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 0rem;
+    border-radius: 7px 7px 0px 0px;
+  }
+  
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-section {
+  flex: 1;
+  margin-bottom: 2rem;
+  min-width: 200px;
+  margin-left: 20%;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-left: 50%;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+  
+  .social-link:hover {
+    color: var(--color-secondary);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Animaciones y efectos */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .section {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-nav {
+      flex-direction: column;
+    }
+    
+    .nav-list {
+      margin-top: 1rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .nav-link {
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .acerca-content, .contacto-container {
+      flex-direction: column;
+    }
+    
+    .section-text, .acerca-list {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+    
+    .section {
+      padding: 4rem 0;
+    }
+  }
+
+
+  /*El diseño responsive (o adaptable) es una técnica de diseño web que permite que una página se ajuste
+   y se vea bien en diferentes tamaños de pantalla y dispositivos,
+    como computadoras de escritorio, tabletas y teléfonos móviles.
+    es esencial para crear sitios web modernos y accesibles.*/
+@media (max-width: 768px) {
+  .main-nav {
+      flex-direction: column;
+      align-items: center; /* Centrar elementos en la navegación */
+  }
+  
+  .nav-list {
+      margin-top: 1rem;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .nav-link {
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+  }
+  
+  .acerca-content, .contacto-container {
+      flex-direction: column;
+  }
+  
+  .section-text, .acerca-list {
+      padding-right: 0;
+      margin-bottom: 2rem;
+  }
+  
+  .section {
+      padding: 4rem 0;
+  }
+
+  .lideres-grid {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .testimonios-slider {
+      flex-direction: column; /* Cambiar a columna para mejor visualización */
+      align-items: center; /* Centrar los testimonios */
+  }
+
+  .testimonio-card {
+      flex: 0 0 auto; /* Ajustar el tamaño de las tarjetas de testimonios */
+      width: 90%; /* Ancho del 90% para tarjetas de testimonios */
+  }
+
+  .noticias-grid {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .footer-content {
+      flex-direction: column; /* Cambiar a columna para el pie de página */
+      align-items: center; /* Centrar contenido del pie de página */
+  }
+
+  .footer-section {
+      margin-left: 0; /* Eliminar margen izquierdo en secciones del pie de página */
+      margin-bottom: 1rem; /* Espaciado entre secciones */
+  }
+}
+
